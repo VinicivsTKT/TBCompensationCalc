@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Calculadora de compensação</title>
+<meta name="author" content="Vinicivs">
+<meta name="description" content="Compensation calculator for Total Battle.">
+<meta name="color-scheme" content="only light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vollkorn&amp;display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Calculadora de compensação</h1>
+<nav id="langs"><img src="language.svg" alt="Other languages"><ul>
+<li><a href="index.html">English (en)</a></li>
+<li><a href="index-es.html">Español (es)</a></li>
+<li><a href="index-fr.html">Français (fr)</a></li>
+<li><a href="index-it.html">Italiano (it)</a></li>
+<li><a href="index-la.html">Latine (la)</a></li>
+<li><a href="index-pt.html">Português (pt)</a></li>
+</ul></nav><form name="compcalc" action="#" id="compcalc">
+<div id="frm_input">
+<div><select name="unit" required=""><option label="Select the unit"></option>
+<optgroup label="Guardas">
+<option value="archers">Arqueiros</option>
+<option value="spearmen">Lanceiros</option>
+<option value="riders">Cavaleiros</option>
+</optgroup>
+<optgroup label="Especialistas">
+<option value="swordsmen">Espadachins</option>
+<option value="spies">Espiões</option>
+</optgroup>
+<optgroup label="Armas de cerco"><option value="catapults">Catapultas</option></optgroup>
+<optgroup label="Mercenários">
+<option value="merc_swift">Atiradores velozes</option>
+<option value="merc_epic">Caçadores de monstros épicos</option>
+</optgroup>
+<option value="others">Outros</option></select></div>
+<div><label>Número de vítimas: <input name="casualties" type="number" min="1" required=""></label></div>
+<div class="buttonbar"><button>Adicionar</button></div>
+</div>
+<div id="tbl_result">
+<div class="item" style="display:none">
+<div class="unitname"></div>
+<div>
+<span class="qtd"></span><span class="mul"></span><span class="cost"></span>
+</div>
+</div>
+<noscript>Sorry! This page only works with the JavaScript enabled browsers.</noscript>
+<div id="grandtotal">
+<div>
+<span class="label">Custo total:</span> <output name="grandtotal" class="cost">0</output>
+</div>
+<div>
+<span class="label">Com 20 % de imposto:</span> <output name="wtax" class="cost">0</output>
+</div>
+</div>
+</div>
+</form>
+<footer><hr>
+<p><span class="ornament">⚜</span> Compensation calculator for Total Battle. <span class="ornament">⚜</span><br>Made by Vinicivs.</p></footer><script src="compcalc.js"></script>
+</body>
+</html>

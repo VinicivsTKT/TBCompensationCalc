@@ -1,0 +1,204 @@
+* { margin: 0; padding: 0 }
+
+body {
+	background-color: #FFF3E0;
+	color: black;
+	font: medium/1.5em 'Vollkorn', 'Book Antiqua', serif;
+}
+
+h1 {
+	background-color: #D84315;
+	color: white;
+	font-size: x-large;
+	font-weight: normal;
+	line-height: 48px;
+	margin-bottom: 1em;
+	padding: 16px 72px 16px 16px;
+	overflow: hidden;
+	white-space: nowrap;
+
+	box-shadow: 0 0 8px rgba(0, 0, 0, .3);
+	text-overflow: ellipsis;
+}
+
+#langs {
+	position: absolute;
+	top: 16px;
+	right: 16px;
+	text-align: right;
+}
+
+#langs ul {
+	background-color: white;
+	border: 1px solid black;
+	color: black;
+	display: none;
+	list-style-position: inside;
+	padding: 8px 16px;
+	text-align: left;
+
+	box-shadow: 0 0 8px rgba(0, 0, 0, .5);
+}
+
+#langs:hover ul,
+#langs:focus ul {
+	display: block;
+}
+
+#frm_input, #tbl_result {
+	margin: 1em auto;
+	max-width: 60ex;
+}
+
+/*-- #frm_input --*/
+
+#frm_input {
+	border: 1px solid #B2AA9C /*rgba(0, 0, 0, .3)*/;
+	width: 40ex;
+
+	border-radius: 4px;
+	box-shadow: 0 0 4px rgba(0, 0, 0, .3);
+}
+
+#frm_input div {
+	padding: 8px 16px;
+}
+
+select,
+input[type="number"] {
+	background-color: transparent;
+	border-color: #2E7D32;
+	border-style: solid;
+	border-width: 0 0 2px;
+	color: inherit;
+	font: inherit;
+	padding: 8px 12px 8px 16px;
+	width: 100%;
+
+	border-radius: 4px 4px 0 0;
+	box-sizing: border-box;
+}
+
+input[type="number"],
+#frm_input .buttonbar {
+	text-align: right;
+}
+
+button {
+	background-color: transparent;
+	border: none;
+	color: #2E7D32;
+	font: inherit;
+	min-height: 36px;
+	min-width: 64px;
+	padding: 0 8px;
+	text-transform: uppercase;
+
+	border-radius: 4px;
+}
+
+/*-- #tbl_result --*/
+
+#tbl_result .item {
+	border-bottom: 1px dotted black;
+
+	overflow-y: hidden; /* for animating the insertion */
+}
+
+#tbl_result .item div,
+#grandtotal div {
+	padding: 8px 16px;
+	position: relative;
+}
+
+#tbl_result .mul {
+	left: 0;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+}
+
+#tbl_result .cost {
+	position: absolute;
+	right: 16px;
+	text-align: right;
+}
+
+#grandtotal {
+	background-color: #FFF3E0;
+	margin-top: -1px;
+	border-top: 1px solid #B2AA9C;
+
+	position: sticky;
+	bottom: 0;
+	box-shadow: 0 -2px 4px -2px rgba(0, 0, 0, .3);
+}
+
+/*-- footer --*/
+
+footer {
+	font-size: small;
+	margin: 16px 0;
+	text-align: center;
+}
+
+footer hr {
+	background-color: #E5DAC9 /*rgba(0, 0, 0, .1)*/;
+	border: 0;
+	height: 1px;
+}
+
+footer p {
+	margin: 16px 0;
+}
+
+footer .ornament {
+	font-size: x-large;
+	padding: 0 16px;
+}
+
+/*-- transitions --*/
+
+select:hover,
+input[type="number"]:hover,
+button:hover,
+#tbl_result .item:hover,
+#grandtotal div:hover {
+	background-color: #E5DAC9 /*rgba(0, 0, 0, .1)*/;
+}
+
+select:focus,
+input[type="number"]:focus,
+button:focus {
+	background-color: #CCC2B3 /*rgba(0, 0, 0, .2)*/;
+}
+
+select,
+input[type="number"],
+button,
+#tbl_result .item,
+#grandtotal div {
+	transition: background-color .3s;
+}
+
+
+#tbl_result .item {
+	animation: .25s expandBlock, .25s .25s fadeIn;
+}
+
+@keyframes expandBlock {
+	from { max-height: 0; opacity: 0 }
+	to { max-height: 5em; opacity: 0 }
+}
+
+@keyframes fadeIn {
+	from { opacity: 0 }
+}
+
+#grandtotal .cost {
+	transition: opacity .25s;
+}
+
+#grandtotal .cost.changing {
+	opacity: 0;
+}
