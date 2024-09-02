@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <xsl:transform xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 	<xsl:output method="html" version="5" />
 	<xsl:param name="lang" />
@@ -13,7 +14,7 @@
 				<meta name="color-scheme" content="only light" />
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
 				<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-				<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vollkorn&amp;display=swap" />
+				<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caudex&amp;display=swap" />
 				<link rel="stylesheet" href="styles.css" />
 			</head>
 
